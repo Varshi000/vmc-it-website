@@ -1,0 +1,42 @@
+.service-card {
+  background: #fff; /* classic clean white card */
+  border: 1px solid #ddd; /* subtle border, nothing flashy */
+  border-radius: 8px; /* smooth corners, timeless */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* light shadow for depth */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  max-width: 350px;
+  margin: 1rem auto;
+
+  min-height: 250px;  /* or use height: 450px; if you want it fixed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-card:hover {
+  transform: translateY(-8px); /* subtle lift on hover */
+  box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+}
+
+.service-card .icon {
+  font-size: 40px; /* big and bold icons, keeps user eyes locked */
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-family: 'Georgia', serif; /* old-school classic font */
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: blue !important;
+  letter-spacing: 0.04em; /* subtle letter spacing for sophistication */
+}
+
+.service-card p {
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}

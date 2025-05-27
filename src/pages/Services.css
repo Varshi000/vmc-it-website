@@ -1,0 +1,144 @@
+/* Services.css */
+.services-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.services-page h1 {
+  font-size: 2.5rem;
+  color: blue;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  font-weight: 600;
+}
+
+.services-page h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #3498db;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.service-item {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.service-image-container {
+  flex: 0 0 45%;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-item:hover .service-image {
+  transform: scale(1.03);
+}
+
+.service-content {
+  flex: 1;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-icon {
+  font-size: 2.5rem;
+}
+
+.service-item h2 {
+  font-size: 1.6rem;
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 600;
+}
+
+.service-desc {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-details {
+  padding-top: 1.5rem;
+  border-top: 1px dashed #e0e0e0;
+}
+
+.service-details p {
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .service-item {
+    flex-direction: column;
+  }
+  
+  .service-image-container {
+    width: 100%;
+    min-height: 250px;
+    flex: auto;
+  }
+  
+  .service-content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-page {
+    padding: 3rem 1rem;
+  }
+  
+  .service-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .service-icon {
+    align-self: center;
+  }
+  
+  .service-content {
+    padding: 1.5rem;
+  }
+}

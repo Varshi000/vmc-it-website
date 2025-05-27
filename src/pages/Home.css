@@ -1,0 +1,206 @@
+/* Home.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary: #4361ee;
+  --secondary: #3f37c9;
+  --accent: #4895ef;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --gray: #6c757d;
+  --light-gray: #e9ecef;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+
+
+/* In your CSS file */
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-content, .hero-image {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Services Section */
+.services-section .container {
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+  align-items: center;    /* center children horizontally */
+  gap: 2rem;              /* space between header, grid, and button */
+}
+
+.service-card {
+  flex: 1 1 250px;   /* Each card takes equal space but min width 250px */
+  max-width: 300px;  /* Optional max width for neatness */
+  height: 200px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding-top: 35px;
+}
+
+.services-section {
+  padding: 5rem 0;
+  background-color: var(--light-gray);
+}
+.services-section .section-header {
+  text-align: center;        /* Center the text horizontally */
+  margin-bottom: 2rem;       /* Space below header before cards */
+}
+
+.service-grid {
+  display: flex;             /* Use flexbox for cards layout */
+  justify-content: center;   /* Center cards horizontally */
+  gap: 2rem;                 /* Space between each card */
+  flex-wrap: nowrap;         /* No wrapping, keep all 3 in one line */
+}
+
+.text-center {
+  text-align: center;        /* Center the button */
+  margin-top: 2rem;          /* Space above the button */
+}
+
+
+
+
+
+
+
+
+
+
+/* Buttons */
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+.cta-button.primary:hover {
+  background: var(--secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(67, 97, 238, 0.4);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.cta-button.secondary:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.cta-button.outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.cta-button.outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero {
+    padding: 2rem 0;
+  }
+  
+  .hero .container {
+    flex-direction: column;
+  }
+  
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  .hero-cta {
+    justify-content: center;
+  }
+  
+  .about-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .stat-item {
+    padding: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+}
